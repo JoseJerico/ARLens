@@ -16,9 +16,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Supabase.initialize(
-    url: 'https://dnjfkyokmqqrpazprwwt.supabase.co',
+    url: 'https://qwqzejzwdzqapjkqadjt.supabase.co',
     anonKey:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRuamZreW9rbXFxcnBhenByd3d0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwNzkwNTgsImV4cCI6MjA3MDY1NTA1OH0.nqYuNIFrC2fQuWiaj4_e2ggJEJTVHfguUsnPNnrk9O4',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3cXplanp3ZHpxYXBqa3FhZGp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxNzA1MDksImV4cCI6MjA4NTc0NjUwOX0.JV36saRgJtP-zKwI86RzjWQRmuwVo9wAqNpyoVSJm3A',
   );
 
   final secureStorage = const FlutterSecureStorage();
