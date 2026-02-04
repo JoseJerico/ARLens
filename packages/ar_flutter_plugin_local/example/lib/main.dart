@@ -2,24 +2,23 @@ import 'package:ar_flutter_plugin_example/examples/externalmodelmanagementexampl
 import 'package:ar_flutter_plugin_example/examples/objectsonplanesexample.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
-
+import 'package:firebase_core/firebase_core.dart'; // Added for Firebase init
 import 'package:ar_flutter_plugin_example/examples/cloudanchorexample.dart';
 import 'package:ar_flutter_plugin_example/examples/localandwebobjectsexample.dart';
 import 'package:ar_flutter_plugin_example/examples/debugoptionsexample.dart';
-
 import 'examples/objectgesturesexample.dart';
 import 'examples/screenshotexample.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Initialize Firebase here
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -35,21 +34,14 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await ArFlutterPlugin.platformVersion;
+      platformVersion = await ArFlutterPlugin.platformVersion ?? 'Unknown';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
     if (!mounted) return;
-
     setState(() {
       _platformVersion = platformVersion;
     });
@@ -133,7 +125,7 @@ class ExampleCard extends StatelessWidget {
   final Example example;
 
   @override
-  build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Card(
       child: InkWell(
         splashColor: Colors.blue.withAlpha(30),
