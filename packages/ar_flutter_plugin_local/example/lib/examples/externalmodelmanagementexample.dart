@@ -19,7 +19,7 @@ import 'package:geoflutterfire/geoflutterfire.dart';
 import 'package:geolocator/geolocator.dart';
 
 class ExternalModelManagementWidget extends StatefulWidget {
-  const ExternalModelManagementWidget({Key? key}) : super(key: key);
+  const ExternalModelManagementWidget({super.key});
   @override
   _ExternalModelManagementWidgetState createState() =>
       _ExternalModelManagementWidgetState();
@@ -528,7 +528,7 @@ class ModelSelectionWidget extends StatefulWidget {
   final Function onTap;
   final FirebaseManager firebaseManager;
 
-  const ModelSelectionWidget({Key? key, required this.onTap, required this.firebaseManager}) : super(key: key);
+  const ModelSelectionWidget({super.key, required this.onTap, required this.firebaseManager});
 
   @override
   _ModelSelectionWidgetState createState() => _ModelSelectionWidgetState();

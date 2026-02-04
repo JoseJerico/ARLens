@@ -7,7 +7,7 @@ import 'package:ar_flutter_plugin/ar_flutter_plugin.dart';
 import 'package:ar_flutter_plugin/datatypes/config_planedetection.dart';
 
 class DebugOptionsWidget extends StatefulWidget {
-  const DebugOptionsWidget({Key? key}) : super(key: key);
+  const DebugOptionsWidget({super.key});
   @override
   _DebugOptionsWidgetState createState() => _DebugOptionsWidgetState();
 }

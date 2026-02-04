@@ -16,7 +16,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:flutter_archive/flutter_archive.dart';
 
 class LocalAndWebObjectsWidget extends StatefulWidget {
-  const LocalAndWebObjectsWidget({Key? key}) : super(key: key);
+  const LocalAndWebObjectsWidget({super.key});
   @override
   _LocalAndWebObjectsWidgetState createState() =>
       _LocalAndWebObjectsWidgetState();

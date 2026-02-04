@@ -14,7 +14,7 @@ import 'package:vector_math/vector_math_64.dart';
 //import 'dart:math';
 
 class ObjectGesturesWidget extends StatefulWidget {
-  const ObjectGesturesWidget({Key? key}) : super(key: key);
+  const ObjectGesturesWidget({super.key});
   @override
   _ObjectGesturesWidgetState createState() => _ObjectGesturesWidgetState();
 }

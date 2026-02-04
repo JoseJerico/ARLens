@@ -19,7 +19,7 @@ import 'package:geoflutterfire/geoflutterfire.dart';
 import 'package:geolocator/geolocator.dart';
 
 class CloudAnchorWidget extends StatefulWidget {
-  const CloudAnchorWidget({Key? key}) : super(key: key);
+  const CloudAnchorWidget({super.key});
   @override
   _CloudAnchorWidgetState createState() => _CloudAnchorWidgetState();
 }

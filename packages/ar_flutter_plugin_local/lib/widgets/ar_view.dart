@@ -143,7 +143,7 @@ class ARView extends StatefulWidget {
   final bool showPlatformType;
 
   const ARView(
-      {Key? key,
+      {super.key,
       required this.onARViewCreated,
       this.planeDetectionConfig = PlaneDetectionConfig.none,
       this.showPlatformType = false,
@@ -151,8 +151,7 @@ class ARView extends StatefulWidget {
           "Camera permission must be given to the app for AR functions to work",
       this.permissionPromptButtonText = "Grant Permission",
       this.permissionPromptParentalRestriction =
-          "Camera permission is restriced by the OS, please check parental control settings"})
-      : super(key: key);
+          "Camera permission is restriced by the OS, please check parental control settings"});
   @override
   _ARViewState createState() => _ARViewState(
       showPlatformType: showPlatformType,
